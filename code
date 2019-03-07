@@ -1,0 +1,123 @@
+class Operators:
+    appName = 'operations by using python operator overloading concept'
+    
+    def __init__(self,value):
+        self.value=value
+    def __str__(self):
+        return 'Your result is:'+str(self.value)
+    def __add__(self,other):
+        total = self.value+other.value
+        b = Operators(total)
+        return b
+    def __sub__(self,other):
+        total = self.value-other.value
+        b = Operators(total)
+        return b
+    def __mul__(self,other):
+        total = self.value*other.value
+        b = Operators(total)
+        return b
+    def __div__(self,other):
+        result = self.value/other.value
+        b = Operators(result)
+        return b
+    def __mod__(self,other):
+        result = self.value%other.value
+        b = Operators(result)
+        return b
+    def __floordiv__(self,other):
+        result = self.value//other.value
+        b = Operators(result)
+        return b
+    def __pow__(self,other):
+        result = self.value**other.value
+        b = Operators(result)
+        return b
+    def __gt__(self,other):
+        total = self.value>other.value
+        b = Operators(total)
+        return b
+    def __ge__(self,other):
+        total = self.value>=other.value
+        b = Operators(total)
+        return b
+    def __le__(self,other):
+        total = self.value<=other.value
+        b = Operators(total)
+        return b
+    def __lt__(self,other):
+        result = self.value<other.value
+        b = Operators(result)
+        return b
+    def __eq__(self,other):
+        result = self.value==other.value
+        b = Operators(result)
+        return b
+    def __ne__(self,other):
+        result = self.value!=other.value
+        b = Operators(result)
+        return b
+    @classmethod
+    def Name(cls):
+        print(cls.appName)
+    @staticmethod
+    def logical(value1,value2):
+        print(value1 and value2)
+        print(value1 or value2)
+
+print('Hi user enjoy only two digits calculation operations like arithmetic and relational and logical')
+while True:
+    value1 = int(input('enter the first value: '))
+    value2 = int(input('enter the second value: '))
+    b = Operators(value1)
+    b1 = Operators(value2)
+    operation = input('Please user could you enter your operation i mean which operation would you like to do: ')
+    if operation == '+':
+        print(b+b1)
+    elif operation == '-':
+        print(b-b1)
+    elif operation == '*':
+        print(b*b1)
+    elif operation == '/':
+        print(b/b1)
+    elif operation == '%':
+        print(b%b1)
+    elif operation == '**':
+        print(b**b1)
+    elif operation == '//':
+        print(b//b1)
+
+    elif operation == '>':
+        print(b>b1)
+    elif operation == '<':
+        print(b<b1)
+    elif operation == '>=':
+        print(b>=b1)
+    elif operation == '==':
+        print(b==b1)
+    elif operation == '!=':
+        print(b!=b1)
+    elif operation == 'logical':
+        b.logical(value1,value2)
+    else:
+        print('please choose only python related operator other functionality not available')
+ 
+   
+    value4 = input('Would you like to continue or Stop your calculations please let me know: ')
+    
+    if value4 == 's':
+        break
+    if value4 == 'c':
+        continue
+    
+        
+    
+    
+    
+    
+    
+    
+
+
+    
+        
